@@ -1,0 +1,44 @@
+-in ms
+-10 versuche
+
+100*100:
+-steepness:
+	-avg:		4
+	-variation:	3-4
+	-0.444 = gen steepness; 0.556 = save map
+
+-spaltamps (all 3):
+	-avg:		907
+	-variation:	897-929
+	-0.023 = gen splatmaps; 0.976 = gen blend area; 0.001 = save splatmaps
+
+200*200:
+-steepness:
+	-avg:		17
+	-variation:	15-18
+	-0.789 = gen steepness; 0.211 = save map
+
+-spaltamps (all 3):
+	-avg:		4160
+	-variation:	4045-4249
+	-0.025 = gen splatmaps; 0.972 = gen blend area; 0.003 = save splatmaps
+
+400*400:
+-steepness:
+	-avg:		70
+	-variation:	65-76
+	-0.800 = gen steepness; 0.200 = save map
+
+-spaltamps (all 3):
+	-avg:		14725
+	-variation:	13460-17107
+	-0.024 = gen splatmaps; 0.974 = gen blend area; 0.001  = save splatmaps
+
+600*600:
+-steepness:
+	-avg:		156
+	-variation:	149-162
+
+-spaltamps (all 3):
+	-avg:		37268
+	-variation:	33605-42981

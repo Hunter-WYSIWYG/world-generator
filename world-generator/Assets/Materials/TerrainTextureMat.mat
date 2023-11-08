@@ -1,0 +1,501 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: TerrainTextureMat
+  m_Shader: {fileID: -6465566751694194690, guid: 70bd79ba75e92074f97f6305261400ad, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - BorealForestTex:
+        m_Texture: {fileID: 2800000, guid: 65257ad2f190de94a944efe2ee5c096e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - PrecTexture:
+        m_Texture: {fileID: 2800000, guid: 84ba841abf5fd56448ba76af74dbaf72, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - SavannaTex:
+        m_Texture: {fileID: 2800000, guid: 65675e5eeef65124a95ad00da52f4538, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - SnowDesertTex:
+        m_Texture: {fileID: 2800000, guid: b5f99e6495343c944bfa5860983dfc05, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Splatmap_temp0:
+        m_Texture: {fileID: 2800000, guid: 9a38870c2e5806e4d8c3192ee6b05b59, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Splatmap_temp1:
+        m_Texture: {fileID: 2800000, guid: df5b0e46dd6bd314bbf09331e2df5502, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Splatmap_temp2:
+        m_Texture: {fileID: 2800000, guid: f05975c4544fc354dad5bc3b9df27b5a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - SteepnessMap:
+        m_Texture: {fileID: 2800000, guid: a53eded5a53cf8c41a305cccae096bda, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - SteepnessTex:
+        m_Texture: {fileID: 2800000, guid: d630c406ed6fc834e957620741ad8bc1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - SteppeTex:
+        m_Texture: {fileID: 2800000, guid: 6671b099c6995d146b5a7d546cc64434, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - StreetMask:
+        m_Texture: {fileID: 2800000, guid: 04b5b407df4ad6544850fd2d9c2d3d63, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - StreetTexture:
+        m_Texture: {fileID: 2800000, guid: 477510a8558e0c54796e6c9ce8c72f22, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - SubtropicDesertTex:
+        m_Texture: {fileID: 2800000, guid: 2cbe28e472cfad346973b9cb6cd5c1e1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - SwampTex:
+        m_Texture: {fileID: 2800000, guid: daa4fa061dc1e0a4db8111f630a91fb4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - TempTexture:
+        m_Texture: {fileID: 2800000, guid: e1e3b18096f79b24c9cdb29aeb531e9d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - TemperateForestTex:
+        m_Texture: {fileID: 2800000, guid: 2334a47d213af7f409e3e52abd92f2f0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - TerainNormals:
+        m_Texture: {fileID: -7639397621201060638, guid: f09e95ff3d6458242a50e34d2faa5fe7, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - TerrainNormalTextures:
+        m_Texture: {fileID: -7639397621201060638, guid: c1977f442284e56489bb88d30ca75e6e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - TerrainTextures:
+        m_Texture: {fileID: -7639397621201060638, guid: 9862d499945627e43aa00c630c11ef01, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - TerrainTextures_non_sRGB:
+        m_Texture: {fileID: -7639397621201060638, guid: f09e95ff3d6458242a50e34d2faa5fe7, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Tex1:
+        m_Texture: {fileID: 2800000, guid: 266c6cebab4733b42b04dec8631cdb6b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Tex2:
+        m_Texture: {fileID: 2800000, guid: 6671b099c6995d146b5a7d546cc64434, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Tex3:
+        m_Texture: {fileID: 2800000, guid: b2d24ce789d4dd94dab8b6bd32074ed2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - TropicalRainforestTex:
+        m_Texture: {fileID: 2800000, guid: d81981646abd79a428f8d4b4923dd49d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - TundraTex:
+        m_Texture: {fileID: 2800000, guid: b2d24ce789d4dd94dab8b6bd32074ed2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Tundra_Steppe_Swamp:
+        m_Texture: {fileID: -7639397621201060638, guid: 9862d499945627e43aa00c630c11ef01, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - VillageMap:
+        m_Texture: {fileID: 2800000, guid: b7305986db1ad264d9fa04149a385b51, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BaseMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalTileSplitter_11b15d2e5a7a486a8f4da4ba93d56c92_TextureArray_2479718831:
+        m_Texture: {fileID: -7639397621201060638, guid: 9862d499945627e43aa00c630c11ef01, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalTileSplitter_11b15d2e5a7a486a8f4da4ba93d56c92_Texture_46607063:
+        m_Texture: {fileID: 2800000, guid: 6671b099c6995d146b5a7d546cc64434, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalTileSplitter_1cd755dd2faf43a995a6766c0d0771f2_TextureArray_2479718831:
+        m_Texture: {fileID: -7639397621201060638, guid: 9862d499945627e43aa00c630c11ef01, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalTileSplitter_2df270af40914ef489472028b3fcb771_TextureArray_2479718831:
+        m_Texture: {fileID: -7639397621201060638, guid: 9862d499945627e43aa00c630c11ef01, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalTileSplitter_2df270af40914ef489472028b3fcb771_Texture_46607063:
+        m_Texture: {fileID: 2800000, guid: 6671b099c6995d146b5a7d546cc64434, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalTileSplitter_632d76f5838f4149b5a15926879211e4_TextureArray_2479718831:
+        m_Texture: {fileID: -7639397621201060638, guid: 9862d499945627e43aa00c630c11ef01, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalTileSplitter_632d76f5838f4149b5a15926879211e4_Texture_46607063:
+        m_Texture: {fileID: 2800000, guid: 6671b099c6995d146b5a7d546cc64434, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalTileSplitter_770f6596aeb04f3b864573626b52f357_TextureArray_2479718831:
+        m_Texture: {fileID: -7639397621201060638, guid: 9862d499945627e43aa00c630c11ef01, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalTileSplitter_770f6596aeb04f3b864573626b52f357_Texture_46607063:
+        m_Texture: {fileID: 2800000, guid: 6671b099c6995d146b5a7d546cc64434, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalTileSplitter_ac9b1beee7d342f888a280cd505c6d01_TextureArray_2479718831:
+        m_Texture: {fileID: -7639397621201060638, guid: 9862d499945627e43aa00c630c11ef01, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalTileSplitter_ac9b1beee7d342f888a280cd505c6d01_Texture_46607063:
+        m_Texture: {fileID: 2800000, guid: 6671b099c6995d146b5a7d546cc64434, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalTileSplitter_acdbc32f261d4aa1bb810a4cce132bd2_TextureArray_2479718831:
+        m_Texture: {fileID: -7639397621201060638, guid: 9862d499945627e43aa00c630c11ef01, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalTileSplitter_acdbc32f261d4aa1bb810a4cce132bd2_Texture_46607063:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalTileSplitter_cd987365cee34bf683bdbdbf66cdd909_TextureArray_2479718831:
+        m_Texture: {fileID: -7639397621201060638, guid: 9862d499945627e43aa00c630c11ef01, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalTileSplitter_cd987365cee34bf683bdbdbf66cdd909_Texture_46607063:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalTileSplitter_e61842894733478bb6961530b116bfb4_TextureArray_2479718831:
+        m_Texture: {fileID: -7639397621201060638, guid: 9862d499945627e43aa00c630c11ef01, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalTileSplitter_e61842894733478bb6961530b116bfb4_Texture_46607063:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalTileSplitter_f2d153de6c5b45fd9bac69450037ffcf_TextureArray_2479718831:
+        m_Texture: {fileID: -7639397621201060638, guid: 9862d499945627e43aa00c630c11ef01, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalTileSplitter_f828830bd3b442b6b6767ee398310398_TextureArray_2479718831:
+        m_Texture: {fileID: -7639397621201060638, guid: 9862d499945627e43aa00c630c11ef01, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalTileSplitter_f828830bd3b442b6b6767ee398310398_Texture_46607063:
+        m_Texture: {fileID: 2800000, guid: 6671b099c6995d146b5a7d546cc64434, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_17f05f66620b4dcf87093cc32a1804da_Texture_1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture1:
+        m_Texture: {fileID: 2800000, guid: b2d24ce789d4dd94dab8b6bd32074ed2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2:
+        m_Texture: {fileID: 2800000, guid: 6671b099c6995d146b5a7d546cc64434, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_02b6850662bd45c1852741f2cd1e0011_Out_0:
+        m_Texture: {fileID: 2800000, guid: 46bda288305c6724e8a923aa6dc130dd, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_12e1f38ab0f54fe4bd9028154bca07cd_Out_0:
+        m_Texture: {fileID: 2800000, guid: 65675e5eeef65124a95ad00da52f4538, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_1dccf9b31c554abb902492e74ac0d102_Out_0:
+        m_Texture: {fileID: 2800000, guid: 2334a47d213af7f409e3e52abd92f2f0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_40ae767cd92e41ffa37d7cc3ab634ee0_Out_0:
+        m_Texture: {fileID: 2800000, guid: 2cbe28e472cfad346973b9cb6cd5c1e1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_53bca1bafa844217a8405d078bcfea77_Out_0:
+        m_Texture: {fileID: 2800000, guid: daa4fa061dc1e0a4db8111f630a91fb4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_5ec692dc34c147b1a17cad1f2cb807b8_Out_0:
+        m_Texture: {fileID: 2800000, guid: 6671b099c6995d146b5a7d546cc64434, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_6851db8fd3be4b6ab41d39301d235918_Out_0:
+        m_Texture: {fileID: 2800000, guid: 6be05fdad5cd2224f80c4f459ead672f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_6c5497f5c8fc44fb86c8fbc4176bfae9_Out_0:
+        m_Texture: {fileID: 2800000, guid: 65257ad2f190de94a944efe2ee5c096e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_792d419357e649cb802c65aadcec52cc_Out_0:
+        m_Texture: {fileID: 2800000, guid: daa4fa061dc1e0a4db8111f630a91fb4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_9b60335960cd43cc9260e1b2308d631b_Out_0:
+        m_Texture: {fileID: 2800000, guid: 65257ad2f190de94a944efe2ee5c096e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_b4156f0834904d5da960694d0ac06e84_Out_0:
+        m_Texture: {fileID: 2800000, guid: 46bda288305c6724e8a923aa6dc130dd, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_b6d0f46466ea409a8fd5bc70dbf07774_Out_0:
+        m_Texture: {fileID: 2800000, guid: 2334a47d213af7f409e3e52abd92f2f0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_bb055b7530054859a3a39abf11c59b36_Out_0:
+        m_Texture: {fileID: 2800000, guid: b2d24ce789d4dd94dab8b6bd32074ed2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_c144bc455a444fd49bd05a5b5b0e1545_Out_0:
+        m_Texture: {fileID: 2800000, guid: b2d24ce789d4dd94dab8b6bd32074ed2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_cd0a6d973d1c4b4a988541e255d2277c_Out_0:
+        m_Texture: {fileID: 2800000, guid: 6671b099c6995d146b5a7d546cc64434, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_cf2085b0c33c41969ca0a7e9e0935cc0_Out_0:
+        m_Texture: {fileID: 2800000, guid: 6be05fdad5cd2224f80c4f459ead672f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_e8020f19a70f4d01b5e66a8dabfb6e62_Out_0:
+        m_Texture: {fileID: 2800000, guid: 2cbe28e472cfad346973b9cb6cd5c1e1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_e8fe2d8840d044a3ad529269560a8f51_Out_0:
+        m_Texture: {fileID: 2800000, guid: b5f99e6495343c944bfa5860983dfc05, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_f606d149080f41e6a05280554f3ac4fd_Out_0:
+        m_Texture: {fileID: 2800000, guid: b5f99e6495343c944bfa5860983dfc05, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_fc82fe42cd5c420fb7698729ec0a7e17_Out_0:
+        m_Texture: {fileID: 2800000, guid: 65675e5eeef65124a95ad00da52f4538, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture3:
+        m_Texture: {fileID: 2800000, guid: 266c6cebab4733b42b04dec8631cdb6b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture4:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureTileSplitter_307a0b261b784b97a36a8cede813eb2f_TextureArray_1368196120:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureTileSplitter_307a0b261b784b97a36a8cede813eb2f_Texture_2875781821:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureTileSplitter_40c8503bef38410aaf43a976a9adc8da_TextureArray_1368196120:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureTileSplitter_40c8503bef38410aaf43a976a9adc8da_Texture_2875781821:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureTileSplitter_5261233659be4f73abbc67bd645e1788_TextureArray_1368196120:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureTileSplitter_699e7d9bf38d435fb27b421cfc8bba56_TextureArray_1368196120:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureTileSplitter_699e7d9bf38d435fb27b421cfc8bba56_Texture_2875781821:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureTileSplitter_81bae586b0cf4505b27f555fa2969e9e_TextureArray_1368196120:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureTileSplitter_81bae586b0cf4505b27f555fa2969e9e_Texture_2875781821:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureTileSplitter_9453bf7d13ce4a6b995db2e7ca072341_TextureArray_1368196120:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureTileSplitter_9453bf7d13ce4a6b995db2e7ca072341_Texture_2875781821:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureTileSplitter_a4b9859f968346ada9f3cfa97b1356d1_TextureArray_1368196120:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureTileSplitter_a4b9859f968346ada9f3cfa97b1356d1_Texture_2875781821:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureTileSplitter_be9e99201dc54ef0a806c2a8aa22dc25_TextureArray_1368196120:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureTileSplitter_be9e99201dc54ef0a806c2a8aa22dc25_Texture_2875781821:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureTileSplitter_bed5f306b45648aa826c5b7cc098bb36_TextureArray_1368196120:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureTileSplitter_bed5f306b45648aa826c5b7cc098bb36_Texture_2875781821:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureTileSplitter_ca7bc5cb41ce4993866ea893c6c08054_TextureArray_1368196120:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureTileSplitter_ca7bc5cb41ce4993866ea893c6c08054_Texture_2875781821:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - test:
+        m_Texture: {fileID: 2800000, guid: b7305986db1ad264d9fa04149a385b51, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - NormalStrength: 2
+    - SteepnessBlending: 5
+    - SteepnessIntensity: 0.2
+    - _AlphaClip: 0
+    - _Blend: 0
+    - _BumpScale: 1
+    - _ClearCoatMask: 0
+    - _ClearCoatSmoothness: 0
+    - _Cull: 2
+    - _Cutoff: 0.5
+    - _DetailAlbedoMapScale: 1
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _EnvironmentReflections: 1
+    - _GlossMapScale: 0
+    - _Glossiness: 0
+    - _GlossyReflections: 0
+    - _Metallic: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.005
+    - _QueueOffset: 0
+    - _RECEIVE_SHADOWS_OFF: 1
+    - _ReceiveShadows: 1
+    - _Smoothness: 0.5
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _Surface: 0
+    - _WorkflowMode: 1
+    - _ZWrite: 1
+    m_Colors:
+    - SteepnessTextureScaling: {r: 48.719997, g: 48.719997, b: 0, a: 0}
+    - TextureScaling: {r: 203, g: 203, b: 0, a: 0}
+    - TextureScaling_Steepness: {r: 20.300001, g: 20.300001, b: 0, a: 0}
+    - TextureScaling_Street: {r: 203, g: 203, b: 0, a: 0}
+    - TextureScaling_Terrain: {r: 203, g: 203, b: 0, a: 0}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+  m_BuildTextureStacks: []
+--- !u!114 &7899445232873074503
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 4

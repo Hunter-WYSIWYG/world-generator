@@ -1,0 +1,282 @@
+houseCount = 15
+
+Iteration: 0 ----------------------------------------------
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:142)
+
+area: 20,9716
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:143)
+
+poi: 442,9813
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:144)
+
+houses: 2226,96
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:145)
+
+country roads: 6602,3396
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:146)
+
+Total: 9293,2525
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:147)
+
+Iteration: 1 ----------------------------------------------
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:142)
+
+area: 18,9502
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:143)
+
+poi: 534,8965
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:144)
+
+houses: 4951,0441
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:145)
+
+country roads: 6564,6548
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:146)
+
+Total: 12069,5456
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:147)
+
+No Path from (32, 23) to (18, 39) was found. No road was build in this step.
+UnityEngine.Debug:Log (object)
+VillageGenerator:calcShortestRoad (UnityEngine.Vector2Int,UnityEngine.Vector2Int,VillageGenerator/VillagePixelType[,],UnityEngine.Texture2D,single,VillageGenerator/VillagePixelType[]) (at Assets/Scripts/VillageGenerator.cs:1308)
+VillageGenerator:calculateCountryRoads (UnityEngine.Texture2D) (at Assets/Scripts/VillageGenerator.cs:550)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:128)
+
+Iteration: 2 ----------------------------------------------
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:142)
+
+area: 14,9318
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:143)
+
+poi: 1500,2392
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:144)
+
+houses: 5484,2844
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:145)
+
+country roads: 7616,8545
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:146)
+
+Total: 14616,3099
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:147)
+
+Could not find fitting StandardVillageArea pixels for all 2 necessary FortificationSeed pixels in 500 iterations.
+UnityEngine.Debug:Log (object)
+VillageGenerator:<generateVillageAreaMap>g__distributePointsIntoAreaEvenly|53_3 (VillageGenerator/SeedingType,VillageGenerator/VillagePixelType[,],int,single,VillageGenerator/VillagePixelType,VillageGenerator/VillagePixelType,VillageGenerator/<>c__DisplayClass53_0&) (at Assets/Scripts/VillageGenerator.cs:856)
+VillageGenerator:generateVillageAreaMap () (at Assets/Scripts/VillageGenerator.cs:652)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:120)
+
+Iteration: 3 ----------------------------------------------
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:142)
+
+area: 19,0896
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:143)
+
+poi: 1520,1644
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:144)
+
+houses: 4189,0148
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:145)
+
+country roads: 3201,1176
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:146)
+
+Total: 8929,3864
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:147)
+
+Iteration: 4 ----------------------------------------------
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:142)
+
+area: 18,9492
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:143)
+
+poi: 1158,2956
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:144)
+
+houses: 6292,3575
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:145)
+
+country roads: 6570,1422
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:146)
+
+Total: 14039,7445
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:147)
+
+Iteration: 5 ----------------------------------------------
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:142)
+
+area: 18,9248
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:143)
+
+poi: 1247,4542
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:144)
+
+houses: 5930,0674
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:145)
+
+country roads: 3667,3598
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:146)
+
+Total: 10863,8062
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:147)
+
+Iteration: 6 ----------------------------------------------
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:142)
+
+area: 18,9723
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:143)
+
+poi: 1074,8374
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:144)
+
+houses: 4836,418
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:145)
+
+country roads: 3977,853
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:146)
+
+Total: 9908,0807
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:147)
+
+Iteration: 7 ----------------------------------------------
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:142)
+
+area: 18,949
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:143)
+
+poi: 967,168
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:144)
+
+houses: 5023,5418
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:145)
+
+country roads: 2905,7858
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:146)
+
+Total: 8915,4446
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:147)
+
+Iteration: 8 ----------------------------------------------
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:142)
+
+area: 17,945
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:143)
+
+poi: 412,2719
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:144)
+
+houses: 3223,4232
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:145)
+
+country roads: 6084,1318
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:146)
+
+Total: 9737,7719
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:147)
+
+Iteration: 9 ----------------------------------------------
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:142)
+
+area: 18,9752
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:143)
+
+poi: 949,0779
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:144)
+
+houses: 5494,1072
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:145)
+
+country roads: 7539,749
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:146)
+
+Total: 14001,9093
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:147)
+
+End-results ----------------------------------------------
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:156)
+
+avgArea: 18,66587
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:157)
+
+avgPOI: 980,73864
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:158)
+
+avgHouses: 4765,12184
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:159)
+
+avgCountryRoads: 5472,99881
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:160)
+
+avgTotal: 11237,52516
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:161)
+
+abweichung: 5700,8653
+UnityEngine.Debug:Log (object)
+VillageGenerator:Update () (at Assets/Scripts/VillageGenerator.cs:162)
+

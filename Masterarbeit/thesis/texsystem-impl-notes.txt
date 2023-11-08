@@ -1,0 +1,120 @@
+\section{Implementierung}
+-im folgenden wird die umsetzung des texturierungssystems näher erklärt
+-zum größten teil konnten die in \ref{subsub-kap:concept-tex-sys} konzipierten lösungsansätze mithilfe von shadern in unitys shader graph tool realisiert werden
+-einige code-abschnitte waren jedoch nötig, um input-texturen für die shader vorzuberechnen
+
+-output des terraingenerators = landschaftsähnliches mesh
+-> verwendet material, das den benutzerdefinierten "TerrainTextureShader" referenziert
+-dieser shader führt alle berechnungen der einzelnen sub-systeme des texturierungssystems zusammen bildet die basis der implementierung
+-er liest sowohl einige benutzerdefinierte, aber auch vorberechnete texturen und parameter ein -> führt alle nötigen berechnungen durch, um aus den input-texturen eine zusammenhängende großtextur zu erstellen, die sich über das gesamte mesh spannt
+-folgende benutzerdefinierte parameter dienen als input für das texturierungssystem:
+    -TextureScaling\_Terrain
+    -TextureScaling\_Street
+    -TextureScaling\_Steepness
+    -NormalStrength
+    -SteepnessIntensity
+    -SteepnessBlending
+    -TerrainTextures
+    -TerrainNormalTextures
+
+-zusätzlich werden vom TerrainTextureShader auch noch folgende vorberechnete parameter eingelesen, die nicht auf direktem weg durch den Nutzer beeinflusst werden können:
+    -Splatmap\_temp01
+    -Splatmap\_temp02
+    -Splatmap\_temp03
+    -SteepnessMap
+    -StreetMap
+
+\subsection{Vorberechnung des Shader-Inputs}
+-die splatmaps basieren auf den biomen, die durch biomgenerator im voraus angelegt werden
+-sie werden jedoch nicht vom biomgenerator berechnet
+-> diese aufgabe fällt dem texturierungssystem zu und wird mithilfe eines algorithmus realisiert:
+    -programm legt leere splatmap-textur an
+    -für jeweils 3 unterschiedliche biom-arten: programm iteriert über alle pixel der aktuellen biom-textur
+    -falls ein gesuchtes biom gefunden -> splatmap-pixel mit dem zugehörigem RGB-farbkanal einfärben
+    -sonst: alle farbkanäle auf 0 setzen -> pixel erscheint dadurch schwarz
+    -output: splatmap in farben rot, grün, blau und schwarz mit diskreten übergängen
+-zur erzeugung der in \ref{subsub-kap: splatting-concept} angesprochenen kontinuierlichen übergänge muss jede splatmap weiteren algorithmus durchlaufen:
+    -für jeden farbkanal der splatmap:
+    -für jede pixelreihe um das betrachtete farbareal
+    -setze jeden pixel in der aktuellen farbe mit einer abgestuften transparenz, gemessen an der vorherigen, inneren pixelreihe
+-durch diese berechnungen wird der gewünschte blend-effekt erzeugt, der die bisher diskreten übergänge zwischen den einzelnen zonen der splatmap in kontinuierliche übergänge verschmelzen lässt
+
+-die vom TerrainTextureShader einzulesende SteepnessMap muss ebenfalls mithilfe eines skripts vorberechnet und abgespeichert werden
+-der entsprechende algorithmus iteriert über alle knoten des mesh
+-auf allen so betrachteten knotenkoordinaten werden auf folgende weise verarbeitet (siehe \ref{code: steepness}):
+    -zuerst werden die höhendifferenzen der nachbarpixel jeder dimension berechnet
+    -diese werden verwendet, um den normalenvektor auf mesh im aktuell betrachteten punkt aufzustellen und zu normalisieren
+    -mithilfe des skalarproduktes und der bildung des Arkuskosinus kann anschließend der winkel zwischen der normalen und dem vektor (0,1,0), der senkrecht in der ebene steht, berechnet werden
+    -das ergebnis ist ein maß für die steigung des meshs im betrachteten punkt, angegeben als bogenmaß
+    -das terrain kann maximal einen steigungswinkel von 90 grad annehmen, was einem bogenmaß-wert von 1,57 entspricht
+    -um die arbeit mit den steigungswerten zu vereinfachen, wird der Wertebereich des outputs mit der InverseLerp-funktion vom intervall [0,1.6] auf das intervall [0,1] transformiert
+-die ergebniswerte zwischen 0 und 1 können im anschluss direkt in den farbkanal einer textur eingetragen und abgespeichert werden
+-eine auf diese weise berechnete steigungstextur wird in abbildung \ref{fig:steepness-vs-terrain} präsentiert
+
+
+die streetMap als input für den TerrainTextureShader enthält informationen darüber, an welchen punkten im mesh straßen eingezeichnet werden müssen
+-die berechnung der streetMap erfolgt jedoch als teil des siedlungsgenerators und wird in \ref{kap:settlement-gen} näher betrachtet
+
+\subsection{Umsetzung der Shader}
+-TerrainTextureShader arbeitet nach pipeline-prinzip
+-jeder berechnungschritt in pipeline läuft ähnlich ab:
+    -bisher berechnete textur als basistextur übernehmen
+    -aufzutragende textur und zugehörige alpha map einlesen
+    -lineare interpolation der aufzutragenden textur mit der basistextur über die alpha map
+-ergebnis eines solchen berechnungsschritts: Basistextur mit neuer, teilweise transparenter textur als oberste schicht
+-TerrainTextureShader kann in einige Sub-Shader unterteilt werden, die im folgenden näher erläutert werden:
+
+-TextureTileSplitter: (siehe \ref{fig:textilesplitter})
+    -repräsentiert die in \ref{subsub-kap: solution-tile-repetition} konzipierte lösung zur vermeidung von tile repetition
+    -dieser sub-shader wird auf alle tiling texturen direkt nach dem einlesen angewendet
+    -input: TextureScaling-Vektor und eine tiling textur
+    -die skalierung der textur, wie in \ref{subsub-kap: solution-tile-repetition} beschrieben, erfolgt durch die multiplikation der einzelnen komponenten des TextureScaling-Vektors mit einigen konstanten
+    -im anschluss werden mithilfe des TilingAndOffset-Knotens in shader graph aus diesen skalierungsfaktoren und einigen weiteren konstanten leicht verschobene uv-koordinaten berechnet
+    -diese uv-koordinaten werden im nächsten schritt unter verwendung des Rotate-Knotens um einen konstanten wert um einen zufällig gewählten mittelpunkt rotiert
+    -für die berechnung des benötigten voronoi-noise wird der Voronoi-Knoten unter verwendung eines konstanten Angle-Offset und einer konstanten Cell-Density angewendet
+    -das benötigte simple noise wird mithilfe des gleichnamigen shader graph knotens erzeugt. hier wird ein relativ großer skalierungsfaktor von 300 angewendet, um eine besonders feines noise zu erhalten. Dies verstärkt den gewünschten effekt der musterverschleierung.
+    -die einzelnen berechneten bestandteile können abschließend mithilfe der LERP-Knoten wie in \ref{subsub-kap: solution-tile-repetition} beschrieben zu einer einzigen output-textur zusammengeführt werden
+
+-WorldTextureSplatter: (siehe \ref{fig:worldtexsplatter})
+    -input:
+        -die drei in \ref{sub-kap: calc tex inputs} berechneten splatmaps
+        -der TextureScaling\_Terrain parameter
+        -das TerrainTextures-Array
+    -nutzt diesen input, um auf grundlage der splatmaps sämtliche durch den biomgenerator (siehe \ref{sub-kap: biome-gen}) berechneten biome zu texturieren
+    -folgt für jedes der 9 biome folgendem ablauf:
+        -textur einlesen
+        -TextureTileSplitter auf textur anwenden
+        -textur mit dem zum biom gehörigen alpha kanal der entsprechenden splatmap multiplizieren
+        -farbwerte der aktuellen textur zur zuletzt berechneten textur addieren
+        -> da die splatmap-farbkanäle disjukte areale vorgeben, werden hierdurch freie areale auf der entstehenden großtextur gefüllt
+        -überlappungen zweier splatmap-areale entstehen lediglich in den randbereichen aufgrund der in die splatmaps einkalkulierten kontinuierlichen übergänge
+        -> das auftreten von texturlöchern wie in \ref{fig:blend-holes} kann durch die wahl eines weitreichenden blending-areals vermieden werden
+
+-SteepnessTextureSplatter
+    -input:
+        -die in \ref{sub-kap: calc tex inputs} berechnete steepnessMap
+        -output des WorldTextureSplatter
+        -steepnessTexture
+        -TextureScaling\_Steepness
+        -SteepnessIntensity
+        -SteepnessBlending
+    -im fokus dieses shaders: berechnung einer alphamap, die die steilhänge des terrains abbildet
+    -dazu: steepnessIntensity-parameter von jedem wert in der steepnessMap abziehen -> entfernt niedrige steigungswerte und lässt nur steilhänge zurück
+    -anschließend multipliziere die steepnessMap mit dem steepnessBlending-parameter -> je nach wahl dieses parameters werden die graustufenwerte der alpha map abgeschwächt oder verstärkt, was wiederum verschmelzende oder aber scharfe grenzen an der steilhangtextur zur folge haben kann
+    -im letzten schritt werden sämtliche ergebniswerte auf den wertebereich [0,1] beschränkt, um einheitliche werte für eine saubere interpolation zu gewährleisten
+    -abschließend kann das splatting der steilhangtextur auf die großtextur mithilfe der bearbeitete steepnessMap als alphamap durchgeführt werden
+    -Vorher erfolgt jedoch noch die skalierung der steilhangtextur mithilfe des TextureScaling\_Steepness-Parameters
+
+-StreetTextureSplatter
+    -in diesem sub-shader wird die vom nutzer ausgewählte straßentextur auf die zu berechnende großtextur splatted
+    -dafür wird die in \ref{kap:settlement-gen} vorberechnete streetMap als alphaMap verwendet
+    -der skalierungsfaktor der straßentextur wird vom TextureScaling\_Street-Parameter vorgegeben
+
+-aus den aufgezählten sub-shadern wird der TerrainTextureShader in folgender reihenfolge zusammengestellt (siehe \ref{fig:TerrainTextureShader}):
+    -splatting der biom-texturen mithilfe des WorldTextureSplatter
+    -splatting der steepness-Textur mithilfe des SteepnessTextureSplatter
+    -splatting der straßentextur mithilfe des StreetTextureSplatter
+
+-diese textur-pipeline wird im TerrainTextureShader sowohl für die farbtexturen als auch auf gleiche weise für die normalen-texturen angelegt, um beide texturarten äquivalent zu verarbeiten (siehe \ref{fig:TerrainTextureShader})
+-in die pipeline zur verarbeitung der normalentexturen wird zusätzlich ein NormalStrength-Knoten eingefügt, der die berechnete normalen-großtextur sowie den NormalStrength-Parameter übergeben bekommt
+-auf diese weise kann der nutzer über den NormalStrength-Parameter die intensität der normalen in der welt anpassen

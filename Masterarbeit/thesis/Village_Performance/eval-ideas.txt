@@ -1,0 +1,2 @@
+-high numbers sometimes because iteration limit 500 reached
+	-> e.g. high max-abw for villageRadius 25

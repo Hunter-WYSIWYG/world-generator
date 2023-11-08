@@ -1,0 +1,35 @@
+-select village type: fortified, farming, peaceful, ...
+
+-select interest features based on village type (fig 4):
+	-sociability (too close/far from neighbors)
+	-worship (houses too close/far from religious buildings)
+	-accessibility (too close/far from road)
+	-slope (too steep)
+	-water (too close/far from water)
+	-fortification (too far from fortifications)
+	-height (religious/fortified buildings high up -> for houses: importance of height decreases with distance to special buildings)
+-generate interest maps (static and dynamic)
+
+-layout and roads:
+	-based on interests: set of village-nodes (area)
+	-> pick some edge nodes of the set -> set of connections points to outside area
+	-> loop: random building seed
+		-> check base conditions
+		-> calc interest value
+		-> random choice if seed is kept (P depends on interest)
+	-> shortest path algo: connect every new building to connection points with road
+		-factor in: slope, water, collision, road-re-use with cost function
+		-maybe generate road-cycle if not too costly (connect end of new road to other existing road; use direction angle)
+	-generate property parcels (gardens/fields/...):
+		-conquer road area from the road point closest to the house seed in both directions
+			-> proceed until other parcel hit or max distance reached
+		-conquer corners fully, dont split into triangular areas (fig 8)
+		-conquer land from road parcels with costs in conquest direction (normal of road) (5.3)
+			-land conquest costs: distance to source (euclid/infinite), water/wall/road (infinite), slope
+		-simplify parcel boundaries (fences should be mostly straight lines)
+
+-random selected seed
+-> check min construction conditions from interests
+-> calculate interest value
+-> random choice wether to keep seed depending on interest
+-> if not, next iteration

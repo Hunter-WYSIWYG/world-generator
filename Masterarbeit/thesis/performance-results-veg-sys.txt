@@ -1,0 +1,68 @@
+conditions:
+	-max temp/prec -> rainforest for max vegetation density
+	-standard parameter for vegetationgenerator -> realistic vegetation
+
+100x100:
+avgNoise: 3,1926
+UnityEngine.Debug:Log (object)
+PrefabGenerator:Update () (at Assets/Scripts/PrefabGenerator.cs:141)
+
+avgCleanup: 2,49435
+UnityEngine.Debug:Log (object)
+PrefabGenerator:Update () (at Assets/Scripts/PrefabGenerator.cs:142)
+
+avgGenerate: 76,76475
+UnityEngine.Debug:Log (object)
+PrefabGenerator:Update () (at Assets/Scripts/PrefabGenerator.cs:143)
+
+avgTotal: 82,4517
+UnityEngine.Debug:Log (object)
+PrefabGenerator:Update () (at Assets/Scripts/PrefabGenerator.cs:144)
+
+abweichung: 12,6083
+UnityEngine.Debug:Log (object)
+PrefabGenerator:Update () (at Assets/Scripts/PrefabGenerator.cs:145)
+
+
+200x200:
+avgNoise: 11,775
+UnityEngine.Debug:Log (object)
+PrefabGenerator:Update () (at Assets/Scripts/PrefabGenerator.cs:141)
+
+avgCleanup: 6,90209
+UnityEngine.Debug:Log (object)
+PrefabGenerator:Update () (at Assets/Scripts/PrefabGenerator.cs:142)
+
+avgGenerate: 251,41286
+UnityEngine.Debug:Log (object)
+PrefabGenerator:Update () (at Assets/Scripts/PrefabGenerator.cs:143)
+
+avgTotal: 270,08995
+UnityEngine.Debug:Log (object)
+PrefabGenerator:Update () (at Assets/Scripts/PrefabGenerator.cs:144)
+
+abweichung: 28,557
+UnityEngine.Debug:Log (object)
+PrefabGenerator:Update () (at Assets/Scripts/PrefabGenerator.cs:145)
+
+
+300x300:
+avgNoise: 45,66372
+UnityEngine.Debug:Log (object)
+PrefabGenerator:Update () (at Assets/Scripts/PrefabGenerator.cs:141)
+
+avgCleanup: 32,60469
+UnityEngine.Debug:Log (object)
+PrefabGenerator:Update () (at Assets/Scripts/PrefabGenerator.cs:142)
+
+avgGenerate: 1180,20894
+UnityEngine.Debug:Log (object)
+PrefabGenerator:Update () (at Assets/Scripts/PrefabGenerator.cs:143)
+
+avgTotal: 1258,47735
+UnityEngine.Debug:Log (object)
+PrefabGenerator:Update () (at Assets/Scripts/PrefabGenerator.cs:144)
+
+abweichung: 330,5674
+UnityEngine.Debug:Log (object)
+PrefabGenerator:Update () (at Assets/Scripts/PrefabGenerator.cs:145)

@@ -1,0 +1,129 @@
+-related works finden/einbeziehen
+-begriff einführen/erläutern:
+	-PCG (related works nutzen)
+	-siedlung
+	-...
+
+-Einleitung:
+	-worum geht es
+	-related works: spiele in einleitung
+	-beiträge dieser arbeit zum thema
+	-warum ist meine arbeit wichtig?
+		-anwendungsbeispiele als stichpunkte
+		-> geldargument
+
+-forschungsfrage?
+	-"in wie weit erfüllen welten, die durch die gewählte kombi aus unterschiedl system-ansätzen generiert werden, anforderungen an videospielwelten?"
+	-> welche anforderungen an videospielwelten gibt es?
+
+Zielsetzung:
+-einzelne systeme -> kombination zu bedienbarer pipeline
+-anforderungen: realismus, performance, benutzbarkeit, flexibilität (architektur/apis -> nutzung in anderen projekten)
+	-> definieren/messen (umfrage, beschreibung, zahlenwerte vergl.)
+	-> widersprechen sich teils gegenseitig
+		-performance <-> realismus
+		-flexibilität <-> benutzbarkeit
+	-texturen
+		-mesh visuell näher an landschaft heranführen
+		-> biome (+übergänge) visualisieren
+		-> steilhänge visualisieren
+		-> texturewiederholungen vermeiden
+	-vegetation
+		-realistische vegetationsverteilung
+		-vegetationsvielfalt (global und lokal -> Unterschiede zwischen biomen aber auch innerhalb eines biomes)
+		-vegetationsabwechslung (kontrolle der vorkommenswahrscheinlichkeit jeder art)
+		-biomübergänge realistisch gestalten
+	-villages
+		-fokus: prozedurale verteilung von siedlungsstrukturen
+		-> keine prozedurale generierung von gebäude-modellen
+		-verteilte siedlungen, keine engen großstädte
+			-anderes problem als "standard großstadtgenerierung"-paper (siehe regelbas. siedl. S810)
+			-realistisch wachsen: platzieren + verbinden
+
+konzept:
+-vorüberlegungen (größenmaßstab?, etc.)
+-muss/soll-anforderungen (echtzeitgen?, wie viele km²?, etc.)
+-diagramme -> übersicht über system (e.g biom-beispielarbeit: S59 -> evtl in kap.: impl.)
+
+technische eval:
+-techn evaluation -> techn verbesserungsvorschläge ableiten
+-systemwerte angeben
+-pipeline laufzeit
+
+-vegetationsgenerator:
+	-local to global + global to local untersuchen (Generating Spatial Distributions for ..)
+		-> hier global to local
+	-zeigen was möglich ist: "Realistic modeling and rendering of plant ecosystems"
+	-aufbau:
+		-noise generation
+		-place vegetation (refactor into prefab-generator?)
+			-biom-randbereiche wahrscheinlichkeitsauswahl
+			-prefab sets für biome
+			-positioning of single prefabs (forest density, fitness, local offset, approximate offset height, waterheight, etc.)
+		-place villages (refactor into prefab generator)
+		-clean up
+
+-texturing:
+	-theoretische grundlagen:
+		-render pipeline -> welche benutzt?
+		-shader graph
+	-uv mapping on mesh
+	-generating splatmaps
+		-temp + prec map to splatmap
+		-calc übergänge zwischen splatmap regionen
+	-shader structure
+		-splatmapping
+		-texture split-up
+
+-siedlungsgenerator:
+	-ansätze:
+		-stochastische analyse realer siedlungen zur strukturinferenz (siedlungsinferenz-paper)
+		-regelbasiertes modellierungssystem (regelbas. siedl.vert. paper)
+	-calc min village size -> find area big enough to fit village
+		-find random fitting seed on map
+		-grow area around random seed to maxSize
+			-first 50% 4er neighborhood, after that 8er
+			-> oktagon shape -> better area distribution
+			-last iterations sets area borders
+		-criteria if pixel is in area: steepness + water distance
+			-> mindestanforderungen sicherstellen
+	-randomly distribute evenly:
+		-#1 road entries onto area border
+			-not too close together
+		-#2 religious seeds onto village area
+			-not too close together
+			-connect first POI to farthest, after that to closest road entry
+				-> use acessibility param to fill area
+		-#3 fort seeds onto village area
+			-not too close together
+			-POI connection rule (s.o.)
+			-after: connect unconnected entries with road network
+		-#4 house seeds onto village area
+			-calc interest value based on 5 param: sociability, worship, acessibility, fortification, geo domination
+			-adjust probability for seeding at a specific pixel based on interest
+			-connect to next road segment
+
+-ausblick
+	-flüsse -> mit erosion arbeiten
+	-seen in versch. höhenlagen
+	-vegetation: local-to-global interessant
+	-vegetation: clustering
+	-siedlungen: zufallsverfahren zur modellauswahl wie bei veg denkbar (nutzer gibt wk für prefab vor)
+	-siedlungen: realistischere prefabs
+	-siedlungen: road cycles?
+	-siedlungen: parzellen -> gärten, felder, grundstücke zäune, etc.
+	-kriterien (performance, felx, realism, benutzbarkeit) verbessern
+		-> algo zur landstraßengenerierung laufzeitoptimieren
+		-> benutzbarkeit: wizard/tutorial/UI
+	-intensive wertebereichtests für parameter -> wann fehler? -> beschränken?
+
+-für gesamtprojekt ansprechen:
+	-PCG
+	-verwandte projekte
+	-gesamtkonzept:
+		-pipeline-aufbau
+		-teile der pipeline
+		-größenverhältnisse
+		-mögliche/sinnvolle weltengrößen -> mit spielen (u.a.?) vergleichen
+		-online/offline? -> vllt pro pipeline-abschnitt
+		-engine (aus)wahl

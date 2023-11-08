@@ -1,0 +1,150 @@
+Aufbauend auf IMP2:
+-nächster natürlicher Schritt: (vegetations-)Assets um Biome zu visualisieren
+	-parameter für asset verteilung/zusammensetzung?
+	-prozedurale asset generierung? (Vegetation-Generator, Stadt-Generator)
+	-Terrain in passende Größe skalieren? (smooth + skale up?)
+		-> unity Meter = reale Meter
+-UI zu IMP1/IMP2 ebenfalls nützlich -> Projekt wirkt am Ende "unfertig"
+
+Meeting 23.03.2023
+-mitte april anmelden
+-anforderungen an genres nennen -> auf "procedurale generierung von offenen spielwelten" beziehen (was sinnvoll, was nicht?)
+-alle punkte zsmfassen
+-was zeichnet spielwelten aus? (was brauchen sie?)
+-was will ich davon machen?
+-1 kapitel pro integriertem system? (vegetation, texturen, städte, etc.)
+-einstieg (mini theorie) -> kapitel pro integriertem system -> tech eval am ende
+
+-bis zum nächsten mal stichpubnkte mit struktur: thematischer überblick (google docs)
+-carot informieren
+
+-format: einspaltig, 11pt?
+
+Plan zum 30.03.2023:
+-https://docs.google.com/document/d/16fBLoRSWi90dJWEAIoTnKhzwpILQaRHjPTtDJ-hFFG8/edit
+-wo arbeit einreichen? (beim Prüfungsvorstand: Carot, etc.)
+-titel überlegen -> einreichung anfang mai
+
+Vorbereitung Meeting 10.05.2023:
+-Flüsse sehr aufwändig
+	-unterschiedliche Flussverläufe, Flussbetten, Erosionsarten
+	-eigenes Projekt oder abstrahieren darstellen -> dann jedoch unrealistisch
+-besprechen:
+	-texturierung mit splatmaps, blending, tile-splitting, parametern, shadern, ...
+	-terrain scaling
+	-vertex density
+	-prefab generator + steepness
+	-player cam
+
+Ergebnisse 10.05.2023:
+-"anteil an der summe" -> kommentar für P(Prefab)
+-zu erledigen:
+	-biome malen -> als textur umsetzen
+	-50% schreiben -> Gliederung (einzelne kleine Kapitel für mini-projekte) (evtl an schlechti schicken)
+	-50% villages programmieren (siehe Paper download & Paper in Email)
+	-Anmeldeformular Masterarbeit
+
+Vorbereitung 11.07.2023:
+-village generator:
+	-parameter & funktionsweise
+	-prefab generierung & models
+	-straßenproblem & cycle problem
+-paper template
+-gliederung
+
+Ergebnisse 11.07.2023:
+-zu bearbeiten:
+	-alle road connections mit etwas verbinden (andere dörfer/kartenrand) (infrastruktur auf karte)
+	-straßen auf texture malen (höhere auflösung) -> shader
+	-mehrere dörfer?
+	-eisenbahnen etc.? (evtl in arbeit ansprechen)
+	-village props ersetzen?
+
+-Arbeit selbst:
+	-kein abbildungsverzeichnis
+	-titelseite schlecht(?)
+	-template von schlechtweg bekommen
+	-bessere Literaturarbeit
+	-nicht nur beschreiben, sondern argumentieren (für gewählte methoden), entscheidungen begründen
+	-einleitung zum schluss
+
+Vorbereitung 29.08.2023:
+-thesis: wo über verwandte projekte berichten? Gliederung macht das schwer
+-template titelseite: wie gestalten/verbessern? (sehr bunt)
+-technische Evaluation:
+	-wie vorgehen?
+	-4 punkte zu viel? -> performance wird zahlen beinhalten, Rest wird diskussion
+-grafik pipeline quelle: keine infos.. lieber austauschen?
+-abbildungen aus quellen nehmen okay? -> wie höhere auflösung?
+
+Ergebnisse:
+x	-Kapitel Systemüberblick
+x		-pipeline
+x		-basis maps texturen sache
+	-6. Ergebnisse:
+		-viele bilder
+x	-cornflowerblue titelseite + keine logos
+	-3.4 performance (wie schnell?) -> kap 6 in ergebnisse + eval umbenennen -> 4 kriterien gesamteval (abläufe schnell genug?)
+x	-> graphics pipeline -> andere quelle finden
+x	-abb immer im text ref
+x	-evtl abb nachbauen-> "nach quelle"
+x	-opengl rendering pipeline übersicht für abb
+x	-bilder vorangegangene arbeiten
+x	-alles nach latex
+x	-programm: größere häuser
+x	-thesis: anführungszeichen in latex machen buchstaben kaputt
+
+Vorbereitung 01.09.2023:
+-render pipeline abb: welche abschnitte app/geo/rast-phasen?
+-weitere stellen (neben tex mapping) bis jetzt an denen mathematisch-technischer gearbeitet werden sollte?
+-richtig verstanden? -> diskussion + konzept zusammenführen
+-shader abschnitt -> verschiedene bedeutungen für "shader"? (hardware vs software?)
+-light mapping & specular mapping: diskussion ob sinnvoll, aber nicht verwendet.. -> sowas weglassen?
+
+Ergebnisse:
+x-konzept anfang: aufbau zsmfassen -> leser führen
+x-abb: geo-phase bis primitive: oben auf phasen und unten auf einzelabschnitte ref
+x-shader graph nicht in code.. übersetzt zu gui -> shader sprachen ansprechen am anfang
+x-shader 1. satz bessere def
+x-shader history auslassen
+x-alpha mapping zu kompliziert -> in tex mapping
+x-abb 4.5 "alpha mapping"
+x-tex splatting bsp abb nach "geschichtet" + danach tex löcher ref
+x-normal mapping: statt tiefe -> oberflächendetails
+x-light mapping bessere abb
+x-light mapping -> wie vorberechnet? in application stage ; "wird deshalb nicht zur laufzeit durchgeführt"
+x-light maps: baken teils mehrere minuten
+x-light mapping -> im finalen spiel kann benutzt werden
+
+Vorbereitung Besprechung:
+X-zielstellung nur in einleitung? -> wiederholt sich (ist aber auch gute erinnerung) -> passt!
+X-bilder erst nach ref -> latex macht das automatisch -> [ht!]
+X-conference title: groß/kleinschreibung -> titel genau so auf website (fundamentals of texture mapping and image warping) -> passt
+X-messwerte + diskussion aller drei kapitel evtl ganz ans ende? -> dopplungen (auch sys specs) vermeiden -> 2-3 learnings ans ende jeder performance; ergebnisse & eval -> erfolge & probleme gesamtsystem; kriterien zielstellung eingehe
+X-selbständigkeitserklärung: titel korrekt? warum unten auf seite? -> passt
+X-nochmal perlin noise (u.a. grundlagen) erklären? -> bereits in paper davor -> passt
+X-template ist druckversion -> white pages, jede zweite seite hat seltsames format, etc.. gewollt? -> passt
+X-fehlgeschlagene road cycles ansprechen? -> passt
+X-"siehe (auch) abschnitt" -> einfach immer so schreiben oder ist da eine regel zu befolgen? (evtl schon in kapitel davor falsch) -> spezieller grund (schonmal das selbe beschrieben)
+X-y-z-raum = ebene
+
+was fehlt?:
+	X-abstract
+	X-motivation
+	X-gliederung
+	X-ergebnisse/evaluation
+	X-zusammenfassung & ausblick
+
+X-zielstellung -> (soll) wird konzept entworfen
+X-verwandte arbeiten -> ist keine literatur / kein wort "verwandt"
+
+Bei finalen Lesen achten auf:
+-datum selbständigkeitserklärung
+-funktionsnamen in \texttt{}
+-abb zuerst referenzieren
+
+-finale fragen:
+-email zukunftssicher?
+
+Verteidigung:
+-größenverhältnisse klären (siehe letzte anmerkungen S112)
